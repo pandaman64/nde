@@ -23,7 +23,10 @@
             inherit pkgs;
           }).rootCrate.build;
         };
-        defaultPackage = packages.nde-core;
+        defaultApp = {
+          type = "app";
+          program = "${packages.nde-core}/bin/nde-core";
+        };
         devShell = pkgs.mkShell {
           buildInputs = [
             pkgs.cargo-edit
