@@ -24,6 +24,12 @@
           }).rootCrate.build;
         };
         defaultPackage = packages.nde-core;
+        devShell = pkgs.mkShell {
+          buildInputs = [
+            pkgs.cargo-edit
+            pkgs.nixpkgs-fmt
+          ];
+        };
       }
     );
 }
