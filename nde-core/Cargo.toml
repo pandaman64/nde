@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 rnix = "0.10.1"
+typed-arena = "2.0.1"
